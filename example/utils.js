@@ -43,6 +43,7 @@ export const openLink = async (url, statusBarStyle, animated = true) => {
         hasBackButton: true,
         browserPackage: null,
         showInRecents: false,
+        includeReferrer: true,
       });
       // A delay to show an alert when the browser is closed
       await sleep(800);
@@ -81,6 +82,7 @@ export const tryDeepLinking = async () => {
         enableUrlBarHiding: true,
         enableDefaultShare: false,
       });
+      await sleep(800);
       Alert.alert('Response', JSON.stringify(result));
     } else {
       Alert.alert('InAppBrowser is not supported :/');

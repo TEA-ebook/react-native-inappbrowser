@@ -16,7 +16,7 @@ export type RedirectResult = {|
   url: string,
 |};
 
-type InAppBrowseriOSOptions = {|
+export type InAppBrowseriOSOptions = {|
   dismissButtonStyle?: 'done' | 'close' | 'cancel',
   preferredBarTintColor?: string,
   preferredControlTintColor?: string,
@@ -41,9 +41,10 @@ type InAppBrowseriOSOptions = {|
   modalEnabled?: boolean,
   enableBarCollapsing?: boolean,
   ephemeralWebSession?: boolean,
+  formSheetPreferredContentSize?: { width: number, height: number },
 |};
 
-type InAppBrowserAndroidOptions = {|
+export type InAppBrowserAndroidOptions = {|
   showTitle?: boolean,
   toolbarColor?: string,
   secondaryToolbarColor?: string,
@@ -62,6 +63,7 @@ type InAppBrowserAndroidOptions = {|
   hasBackButton?: boolean,
   browserPackage?: string,
   showInRecents?: boolean,
+  includeReferrer?: boolean,
 |};
 
 export type InAppBrowserOptions = {
